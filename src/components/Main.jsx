@@ -2,7 +2,7 @@ import BriefcaseIcon from "../assets/icons/BriefcaseIcon";
 
 export default function Main() {
   return (
-    <section className="overflow-y-auto max-h-screen">
+    <section className="">
       <div className="flex flex-row items-center gap-8">
         <BriefcaseIcon />
         <h2 className="text-3xl font-medium">Experiencia</h2>
@@ -11,9 +11,8 @@ export default function Main() {
         <li>
           <article className="flex flex-col gap-4 relative pb-20">
             <div>
-              <div className="rounded-full w-[17px] h-[45px] bg-black blur-[3px] absolute -top-5 right-13 z-10"></div>
               <div className="shadow-[0px_0px_10px_5px] shadow-[#0D5E87] rounded-full w-[17px] h-[17px] bg-[#D9D9D9] absolute top-10 right-13 z-10"></div>
-              <div className="w-[1px] min-h-full bg-[#00FFD4] shadow-[0px_0px_2px_1px] shadow-[#0D5E87] absolute right-15 top-0"></div>
+              <div className="w-[1px] min-h-full bg-black absolute right-15 top-0 bg-gradient-to-t from-[#00FFD4] from-[90%] to-transparent "></div>
             </div>
             <header>
               <h3 className="text-[32px] font-medium">
@@ -49,7 +48,7 @@ export default function Main() {
           <article className="flex flex-col gap-4 relative pb-20">
             <div>
               <div className="shadow-[0px_0px_5px_2.5px] shadow-[#E40004] rounded-full w-[9px] h-[9px] bg-[#D9D9D9] absolute top-10 right-14 z-10"></div>
-              <div className="w-[1px] min-h-full bg-[#00FFD4] shadow-[0px_0px_2px_1px] shadow-[#0D5E87] absolute right-15 top-0"></div>
+              <div className="w-[1px] min-h-full bg-[#00FFD4] absolute right-15 top-0"></div>
             </div>
             <header>
               <h3 className="text-[32px] font-medium">
@@ -82,11 +81,11 @@ export default function Main() {
           </article>
         </li>
         <li>
-          <article className="flex flex-col gap-4 relative">
+          <article className="flex flex-col gap-4 relative mb-10">
             <div>
               <div className="shadow-[0px_0px_5px_2.5px] shadow-[#6FA86D] rounded-full w-[9px] h-[9px] bg-[#D9D9D9] absolute top-10 right-14 z-10"></div>
-              <div className="w-[1px] min-h-full bg-[#00FFD4] shadow-[0px_0px_2px_1px] shadow-[#0D5E87] absolute right-15 top-0"></div>
-              <div className="w-10 h-10 rounded-full absolute bg-black blur-[5px] -bottom-5 right-10 z-10"></div>
+              <div className="w-[1px] min-h-full bg-[#00FFD4] absolute right-15 top-0 bg-gradient-to-t from-black to-transparent"></div>
+              {/* <div className="w-10 h-10 rounded-full absolute bg-black blur-[5px] -bottom-5 right-10 z-10"></div> */}
             </div>
             <header>
               <h3 className="text-[32px] font-medium">
