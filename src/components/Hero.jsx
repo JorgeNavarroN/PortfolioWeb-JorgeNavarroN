@@ -4,9 +4,9 @@ import LocationIcon from "../assets/icons/LocationIcon";
 
 export default function Hero() {
   return (
-    <section className="z-10">
-      <div className="grid place-content-center items-center gap-y-[20px] sticky">
-        <div className="grid place-content-center items-center gap-x-[20px]">
+    <section className="z-10 h-full">
+      <div className="grid items-center gap-y-[20px]">
+        <div className="grid grid-cols-[auto_1fr] items-center gap-x-[1rem]">
           <img
             className="row-span-2 rounded-full"
             width={82}
@@ -17,11 +17,11 @@ export default function Hero() {
           <h1 className="col-start-2 text-[40px] font-medium">
             Jorge Navarro Nuñez
           </h1>
-          <p className="col-start-2 text-[18px] font-light tracking-[4px]">
+          <p className="col-start-2 text-[18px] font-light tracking-[4px] drop-shadow-[0_5px_7px_rgb(0,0,0)]">
             Técnico en Ingenieria de Software
           </p>
         </div>
-        <p className="w-[30rem]">
+        <p className="">
           Apasionado por el desarrollo de software en constante aprendizaje.
           Busco aportar con mis conocimientos y proponer soluciones innovadoras
           en la industria tecnológica.
@@ -35,11 +35,11 @@ export default function Hero() {
           />
         </div>
         <div className="grid grid-cols-2 gap-8">
-          <a href="" className="flex flex-row items-center justify-center gap-2 py-1 bg-transparent border-3 rounded-full text-xl">
+          <a href="" className="flex flex-row items-center justify-center gap-2 py-1 bg-transparent border-1 border-[#063869] rounded-full text-xl">
             <LinkedInIcon />
             LinkedIn
           </a>
-          <a href="" className="flex flex-row items-center justify-center gap-2 py-1 bg-transparent border-3 rounded-full text-xl">
+          <a href="" className="flex flex-row items-center justify-center gap-2 py-1 bg-transparent border-1 border-[#063869] rounded-full text-xl">
             <GithubIcon />
             Github
           </a>
