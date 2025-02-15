@@ -1,11 +1,16 @@
 import UserCheckIcon from "../assets/icons/UserCheckIcon";
+import useInitialAnimate from "../hooks/useInitialAnimate";
 
 export default function SobreMi() {
+  const { isVisible: isVisible1, ref: ref1 } = useInitialAnimate();
+  const { isVisible: isVisible2, ref: ref2 } = useInitialAnimate();
+  const { isVisible: isVisible3, ref: ref3 } = useInitialAnimate();
+
   return (
-    <section className="col-span-2 grid grid-cols-1 gap-8">
+    <section id="sobremi-section" className="col-span-2 grid grid-cols-1 gap-8">
       <div className="flex flex-row items-center gap-8">
         <UserCheckIcon />
-        <h2 className="text-3xl font-medium">Sobre mí</h2>
+        <h2 className="text-3xl font-medium my-10">Sobre mí</h2>
       </div>
       <main>
         <article className="grid grid-cols-[auto_1fr] items-center gap-20">
@@ -14,14 +19,33 @@ export default function SobreMi() {
           </div> */}
           <div className="relative">
             <img
+              ref={ref1}
               width={300}
               height={300}
-              className="rounded-xl drop-shadow-[0_5px_10px_rgb(0,0,0)]"
+              className={`rounded-xl transition-all duration-[1500ms] drop-shadow-[0_5px_10px_rgb(0,0,0)] ${
+                isVisible1
+                  ? "opacity-100"
+                  : "opacity-0"
+              }`}
               src="https://github.com/JorgeNavarroN.png"
               alt="Jorge Navarro 😎"
             />
-            <div className="w-[300px] h-[300px] bg-[#170b33] rounded-2xl absolute top-4 -right-4 -z-10 drop-shadow-[0_5px_10px_rgb(0,0,0)]"></div>
-            <div className="w-[300px] h-[300px] bg-[#11031d] rounded-2xl absolute top-8 -right-8 -z-20 drop-shadow-[0_5px_10px_rgb(0,0,0)]"></div>
+            <div
+              ref={ref2}
+              className={`w-[300px] h-[300px] duration-[1000ms] bg-[#170b33] rounded-xl absolute top-4 -right-4 -z-10 drop-shadow-[0_5px_10px_rgb(0,0,0)] ${
+                isVisible2
+                  ? "opacity-100"
+                  : "opacity-0"
+              }`}
+            ></div>
+            <div
+              ref={ref3}
+              className={`w-[300px] h-[300px] duration-[500ms] bg-[#11031d] rounded-xl absolute top-8 -right-8 -z-20 drop-shadow-[0_5px_10px_rgb(0,0,0)] ${
+                isVisible3
+                  ? "opacity-100"
+                  : "opacity-0"
+              }`}
+            ></div>
           </div>
           <div className="flex flex-col gap-4">
             <p className="text-xl">

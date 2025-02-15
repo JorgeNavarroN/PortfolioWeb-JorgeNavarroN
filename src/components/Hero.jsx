@@ -1,10 +1,22 @@
+import { useState } from "react";
 import GithubIcon from "../assets/icons/GithubIcon";
 import LinkedInIcon from "../assets/icons/LinkedInIcon";
 import LocationIcon from "../assets/icons/LocationIcon";
+import LinkReference from "./LinkReference";
+import { useEffect } from "react";
+import { useRef } from "react";
+import useInitialAnimate from "../hooks/useInitialAnimate";
 
 export default function Hero() {
+  const { isVisible, ref } = useInitialAnimate();
+
   return (
-    <section className="z-10 h-full">
+    <section
+      ref={ref}
+      className={`z-10 h-full my-10 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+      }`}
+    >
       <div className="grid items-center gap-y-[20px]">
         <div className="grid grid-cols-[auto_1fr] items-center gap-x-[1rem]">
           <img
@@ -35,14 +47,16 @@ export default function Hero() {
           />
         </div>
         <div className="grid grid-cols-2 gap-8">
-          <a href="" className="flex flex-row items-center justify-center gap-2 py-1 bg-transparent border-1 border-[#063869] rounded-full text-xl">
+          <LinkReference href={"https://www.linkedin.com/in/jorgenavarron/"}>
             <LinkedInIcon />
             LinkedIn
-          </a>
-          <a href="" className="flex flex-row items-center justify-center gap-2 py-1 bg-transparent border-1 border-[#063869] rounded-full text-xl">
+          </LinkReference>
+          <LinkReference
+            href={"https://github.com/JorgeNavarroN?tab=repositories"}
+          >
             <GithubIcon />
-            Github
-          </a>
+            GitHub
+          </LinkReference>
         </div>
       </div>
     </section>

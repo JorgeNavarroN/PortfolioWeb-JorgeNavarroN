@@ -2,10 +2,10 @@ import BriefcaseIcon from "../assets/icons/BriefcaseIcon";
 
 export default function Main() {
   return (
-    <section className="">
+    <section id="experiencia-section" className="">
       <div className="flex flex-row items-center gap-8">
         <BriefcaseIcon />
-        <h2 className="text-3xl font-medium">Experiencia</h2>
+        <h2 className="text-3xl font-medium my-10">Experiencia</h2>
       </div>
       <ol>
         <li className="grid grid-cols-[1fr_auto]">
