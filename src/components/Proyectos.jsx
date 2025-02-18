@@ -20,7 +20,7 @@ export default function Proyectos() {
           <Proyecto
             nameClass={"rotate-2"}
             imageURL={
-              "https://res.cloudinary.com/dl1fugaha/image/upload/v1739720424/portfolio-web-bruno_qpuuep.jpg"
+              "/cloudinary/images/v1739720424/portfolio-web-bruno_qpuuep.jpg"
             }
             title={"Portfolio web de ING. Bruno Navarro"}
             description={
@@ -35,7 +35,7 @@ export default function Proyectos() {
           <Proyecto
             nameClass={"-rotate-2"}
             imageURL={
-              "https://res.cloudinary.com/dl1fugaha/image/upload/v1739463920/360226414-14d48934-c090-42cb-acef-335aad935a28_txjb1d.png"
+              "/cloudinary/images/v1739463920/360226414-14d48934-c090-42cb-acef-335aad935a28_txjb1d.png"
             }
             title={"Real Time Weather"}
             description={
@@ -52,7 +52,7 @@ export default function Proyectos() {
           <Proyecto
             nameClass={"rotate-2"}
             imageURL={
-              "https://res.cloudinary.com/dl1fugaha/image/upload/v1739456550/356247713-c6ba323a-2e56-4a5d-8830-bb0058818e38_pgeizx.png"
+              "/cloudinary/images/v1739456550/356247713-c6ba323a-2e56-4a5d-8830-bb0058818e38_pgeizx.png"
             }
             title={"Dodge Car"}
             description={

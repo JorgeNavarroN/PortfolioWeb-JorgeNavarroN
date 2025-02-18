@@ -10,22 +10,22 @@ export default function Certificaciones() {
   const certificados = [
     {
       id: "v1739710315",
-      src: "https://res.cloudinary.com/dl1fugaha/image/upload/v1739710315/course_certificate_JAVA_FUNDAMENTALS_page-0001_tzjfny.jpg",
+      src: "/cloudinary/images/v1739710315/course_certificate_JAVA_FUNDAMENTALS_page-0001_tzjfny.jpg",
       alt: "Certificado Java Fundamentals",
     },
     {
       id: "v1739710625",
-      src: "https://res.cloudinary.com/dl1fugaha/image/upload/v1739710625/course_certificate_DATABASE_FOUNDATION_page-0001_lml4d6.jpg",
+      src: "/cloudinary/images/v1739710625/course_certificate_DATABASE_FOUNDATION_page-0001_lml4d6.jpg",
       alt: "Certificado Database Foundations",
     },
     {
       id: "v1739710609",
-      src: "https://res.cloudinary.com/dl1fugaha/image/upload/v1739710609/course_certificate_JAVA_FOUNDATIONS_page-0001_z1ixwj.jpg",
+      src: "/cloudinary/images/v1739710609/course_certificate_JAVA_FOUNDATIONS_page-0001_z1ixwj.jpg",
       alt: "Java Foundations",
     },
     {
       id: "v1739710617",
-      src: "https://res.cloudinary.com/dl1fugaha/image/upload/v1739710617/course_certificate_DATABASE_PROGRAMING_WITH_SQL_page-0001_ghiqzp.jpg",
+      src: "/cloudinary/images/v1739710617/course_certificate_DATABASE_PROGRAMING_WITH_SQL_page-0001_ghiqzp.jpg",
       alt: "Database Programming with SQL",
     },
   ];
