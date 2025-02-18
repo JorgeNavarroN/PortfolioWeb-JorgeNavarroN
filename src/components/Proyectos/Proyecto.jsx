@@ -1,9 +1,6 @@
-import { useRef } from "react";
 import Github from "../../assets/icons/GithubIconOg";
 import LinkIcon from "../../assets/icons/LinkIcon";
 import LinkReference from "../LinkReference";
-import { useEffect } from "react";
-import { useState } from "react";
 import { tecnologies } from "../../services/tecnologies.jsx";
 import useInitialAnimate from "../../hooks/useInitialAnimate.js";
 
@@ -21,7 +18,7 @@ export default function Proyecto({
     <>
       <div
         ref={ref}
-        className={`w-full h-full rounded-[12px] cursor-pointer overflow-hidden border-2 bg-[#121c29] border-[#42566e] drop-shadow-[0_5px_10px_rgb(0,0,0)] hover:rotate-0 transition-all duration-500 ${nameClass} ${
+        className={`w-full h-full flex flex-col rounded-[0.75rem] cursor-pointer overflow-hidden border-2 bg-[#121c29] border-[#42566e] drop-shadow-[0_0.313rem_0.625rem_rgb(0,0,0)] hover:rotate-0 transition-all duration-500 ${nameClass} ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
         }`}
       >
@@ -32,18 +29,18 @@ export default function Proyecto({
         </div>
         <img src={imageURL} alt={title + " Image"} />
       </div>
-      <article className="flex flex-col gap-8">
+      <article className="flex flex-col gap-8 dark:text-white text-[#010208]">
         <div className="flex flex-col gap-4">
           <h3 className="text-[2rem] font-medium">{title}</h3>
           <p>{description}</p>
         </div>
-        <ul className="flex flex-row gap-4">
+        <ul className="flex sm:flex-row max-sm:flex-col gap-4">
           {tecnologias.map((tecnologia) => {
             const objTec = tecnologies[tecnologia];
             return <li key={objTec.id}>{objTec.element}</li>;
           })}
         </ul>
-        <footer className="grid grid-cols-2 gap-x-[1.25rem]">
+        <footer className="grid sm:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-y-[1.25rem] gap-x-[1.25rem]">
           {linkRepository && (
             <LinkReference href={linkRepository}>
               <Github width={32} height={32} />

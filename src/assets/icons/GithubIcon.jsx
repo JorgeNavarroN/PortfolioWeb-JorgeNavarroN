@@ -9,7 +9,7 @@ export default function GithubIcon(props) {
     >
       <g clipPath="url(#a)">
         <path
-          stroke="#F3F3F3"
+          stroke="#000"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={4}

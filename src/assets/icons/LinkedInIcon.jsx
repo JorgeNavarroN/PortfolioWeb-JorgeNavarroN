@@ -8,7 +8,7 @@ export default function LinkedInIcon(props) {
       {...props}
     >
       <path
-        stroke="#F3F3F3"
+        stroke="#000"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={3}

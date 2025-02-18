@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html, body {
-  @apply h-full bg-black text-white;
+  @apply h-full bg-black text-black;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #010208;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 3px solid white;
+  border-radius: 20px;
 }

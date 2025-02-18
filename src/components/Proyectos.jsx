@@ -5,14 +5,29 @@ export default function Proyectos() {
   return (
     <section
       id="proyectos-section"
-      className="col-span-2 row-start-2 grid grid-cols-1 gap-8 my-10"
+      className="col-span-2 row-start-2 grid grid-cols-1 gap-8 my-10 dark:text-white text-[#010208]"
     >
       <div className="flex flex-row items-center gap-8">
         <FolderIcon />
         <h2 className="text-3xl font-medium my-10">Proyectos</h2>
       </div>
       <ul className="flex flex-col gap-20">
-        <li className="grid grid-cols-2 gap-20">
+        <li className="grid xl:grid-cols-2 gap-20">
+          <Proyecto
+            nameClass={"rotate-2"}
+            imageURL={
+              "https://res.cloudinary.com/dl1fugaha/image/upload/v1739720424/portfolio-web-bruno_qpuuep.jpg"
+            }
+            title={"Portfolio web de ING. Bruno Navarro"}
+            description={
+              "Portafolio web para Bruno Navarro, con el objetivo de resaltar su experiencia profesional y proyectos de manera clara y atractiva. La página cuenta con un diseño moderno y responsivo, garantizando una excelente experiencia en cualquier dispositivo."
+            }
+            linkRepository={"https://github.com/JorgeNavarroN/Dodge-Car-rep"}
+            linkPreview={"https://brunonavdev.netlify.app/"}
+            tecnologias={["html", "tailwindcss", "javascript"]}
+          />
+        </li>
+        <li className="grid xl:grid-cols-2 gap-20">
           <Proyecto
             nameClass={"-rotate-2"}
             imageURL={
@@ -29,7 +44,7 @@ export default function Proyectos() {
             tecnologias={["react", "tailwindcss"]}
           />
         </li>
-        <li className="grid grid-cols-2 gap-20">
+        <li className="grid xl:grid-cols-2 gap-20">
           <Proyecto
             nameClass={"rotate-2"}
             imageURL={
@@ -37,7 +52,7 @@ export default function Proyectos() {
             }
             title={"Dodge Car"}
             description={
-              "Juego 2D de un auto en una carretera donde debes esquivar el tráfico. Realizado con Python, utilizando la librería PyGame."
+              "DodgeCar, un juego interactivo creado en Python utilizando la biblioteca Pygame. En este juego, los jugadores controlan un vehículo que debe esquivar otros vehículos en movimiento, poniendo a prueba sus reflejos y habilidades de coordinación."
             }
             linkRepository={"https://github.com/JorgeNavarroN/Dodge-Car-rep"}
             tecnologias={["python"]}
