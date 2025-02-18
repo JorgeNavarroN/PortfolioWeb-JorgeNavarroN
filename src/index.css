@@ -2,19 +2,31 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-html, body {
-  @apply h-full bg-black text-black;
-}
+@layer base {
+  html, body {
+    @apply h-full bg-black text-black;
+  }
 
-body::-webkit-scrollbar {
-  width: 12px;
-}
+  body {
+    --scrollbar-bg: #eeeff5;
+    --scrollbar-thumb: #333;
+  }
 
-body::-webkit-scrollbar-track {
-  background: #010208;
-}
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
 
-body::-webkit-scrollbar-thumb {
-  border: 3px solid white;
-  border-radius: 20px;
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border: 3px solid var(--scrollbar-thumb);
+    border-radius: 20px;
+  }
+
+  .dark {
+    --scrollbar-bg: #010208;
+    --scrollbar-thumb: #eeeff5;
+  }
 }

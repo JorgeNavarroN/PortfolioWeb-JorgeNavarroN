@@ -1,12 +1,16 @@
+import { useContext } from "react";
 import BriefcaseIcon from "../assets/icons/BriefcaseIcon";
 import Puesto from "./Puesto";
+import { ThemeContext } from "../assets/contexts/ThemeContext";
 
 export default function Experiencia() {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
     <section id="experiencia-section" className="max-sm:col-start-1">
       <div className="flex flex-row items-center gap-8">
-        <BriefcaseIcon />
-        <h2 className="xl:text-3xl lg:text-2xl font-medium my-10 dark:text-white text-[#010208]">
+        <BriefcaseIcon stroke={isDarkMode ? "#fff" : "#333"} />
+        <h2 className="xl:text-3xl lg:text-2xl font-medium my-10 dark:text-white text-[#333]">
           Experiencia Pre - Profesional
         </h2>
       </div>

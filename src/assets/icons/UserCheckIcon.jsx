@@ -5,15 +5,16 @@ export default function UserCheckIcon(props) {
       width={48}
       height={48}
       fill="none"
+      viewBox="0 0 24 24"
       {...props}
     >
       <path
-        stroke="#F3F3F3"
+        stroke={props}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={4}
-        d="M32 42v-4a8 8 0 0 0-8-8H10a8 8 0 0 0-8 8v4m32-20 4 4 8-8m-21-4a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"
+        strokeWidth={2}
+        d="M16 21v-1.2c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C13.72 15 12.88 15 11.2 15H6.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C2 17.28 2 18.12 2 19.8V21M16 6l2 2 4-4m-9.5 3.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
       />
     </svg>
-  )
+  );
 }

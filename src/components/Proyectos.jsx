@@ -1,14 +1,18 @@
+import { useContext } from "react";
 import FolderIcon from "../assets/icons/FolderIcon";
 import Proyecto from "./Proyectos/Proyecto";
+import { ThemeContext } from "../assets/contexts/ThemeContext";
 
 export default function Proyectos() {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
     <section
       id="proyectos-section"
-      className="col-span-2 row-start-2 grid grid-cols-1 gap-8 my-10 dark:text-white text-[#010208]"
+      className="col-span-2 row-start-2 grid grid-cols-1 gap-8 my-10 dark:text-white text-[#333]"
     >
       <div className="flex flex-row items-center gap-8">
-        <FolderIcon />
+        <FolderIcon stroke={isDarkMode ? "#fff" : "#333"} />
         <h2 className="text-3xl font-medium my-10">Proyectos</h2>
       </div>
       <ul className="flex flex-col gap-20">

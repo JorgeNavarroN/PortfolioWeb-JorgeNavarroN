@@ -1,15 +1,21 @@
+import { useContext } from "react";
 import UserCheckIcon from "../assets/icons/UserCheckIcon";
 import useInitialAnimate from "../hooks/useInitialAnimate";
+import { ThemeContext } from "../assets/contexts/ThemeContext";
 
 export default function SobreMi() {
   const { isVisible: isVisible1, ref: ref1 } = useInitialAnimate();
   const { isVisible: isVisible2, ref: ref2 } = useInitialAnimate();
   const { isVisible: isVisible3, ref: ref3 } = useInitialAnimate();
+  const { isDarkMode } = useContext(ThemeContext);
 
   return (
-    <section id="sobremi-section" className="col-span-2 grid grid-cols-1 gap-8 dark:text-white text-[#010208]">
+    <section
+      id="sobremi-section"
+      className="col-span-2 grid grid-cols-1 gap-8 dark:text-white text-[#333]"
+    >
       <div className="flex flex-row items-center gap-8">
-        <UserCheckIcon />
+        <UserCheckIcon stroke={isDarkMode ? "#fff" : "#333"} />
         <h2 className="text-3xl font-medium my-10">Sobre mí</h2>
       </div>
       <main>
@@ -27,13 +33,13 @@ export default function SobreMi() {
             />
             <div
               ref={ref2}
-              className={`w-[18.75rem] h-[18.75rem] duration-[1000ms] bg-[#170b33] rounded-xl absolute top-4 -right-4 -z-10 drop-shadow-[0_0.313rem_0.625rem_rgb(0,0,0)] ${
+              className={`w-[18.75rem] h-[18.75rem] duration-[1000ms] dark:bg-[#170b33] bg-[#919191] rounded-xl absolute top-4 -right-4 -z-10 drop-shadow-[0_0.313rem_0.625rem_rgb(0,0,0)] ${
                 isVisible2 ? "opacity-100" : "opacity-0"
               }`}
             ></div>
             <div
               ref={ref3}
-              className={`w-[18.75rem] h-[18.75rem] duration-[500ms] bg-[#11031d] rounded-xl absolute top-8 -right-8 -z-20 drop-shadow-[0_0.313rem_0.625rem_rgb(0,0,0)] ${
+              className={`w-[18.75rem] h-[18.75rem] duration-[500ms] dark:bg-[#11031d] bg-[#4b4b4b] rounded-xl absolute top-8 -right-8 -z-20 drop-shadow-[0_0.313rem_0.625rem_rgb(0,0,0)] ${
                 isVisible3 ? "opacity-100" : "opacity-0"
               }`}
             ></div>

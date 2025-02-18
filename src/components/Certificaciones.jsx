@@ -2,8 +2,11 @@ import AwardIcon from "../assets/icons/AwardIcon";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { EffectCards } from "swiper/modules";
+import { useContext } from "react";
+import { ThemeContext } from "../assets/contexts/ThemeContext.jsx";
 
 export default function Certificaciones() {
+  const { isDarkMode } = useContext(ThemeContext);
   const certificados = [
     {
       id: "v1739710315",
@@ -28,9 +31,9 @@ export default function Certificaciones() {
   ];
 
   return (
-    <section className="col-span-2 grid grid-cols-1 gap-8 dark:text-white text-[#010208]">
+    <section className="col-span-2 grid grid-cols-1 gap-8 dark:text-white text-[#333]">
       <div className="flex flex-row items-center gap-8">
-        <AwardIcon />
+        <AwardIcon stroke={isDarkMode ? "#fff" : "#333"} />
         <h2 className="text-3xl font-medium">Certificaciones</h2>
       </div>
       <Swiper

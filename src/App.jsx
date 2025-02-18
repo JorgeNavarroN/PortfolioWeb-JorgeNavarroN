@@ -10,15 +10,31 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import { ThemeContext } from "./assets/contexts/ThemeContext.jsx";
 import SystemIconDark from "./assets/icons/SystemIconDark.jsx";
+import DarkModeIcon from "./assets/icons/DarkModeIcon.jsx";
+import LightModeIcon from "./assets/icons/LightModeIcon.jsx";
+import { useCallback } from "react";
+import HamburgerMenuIcon from "./assets/icons/HamburgerMenuIcon.jsx";
 
 function App() {
   const [scrolled, handleClickNavItem] = useScroll();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const { theme, handleThemeChange } = useContext(ThemeContext);
-  const [isOpenChooseTheme, setIsOpenChooseTheme] = useState(true);
+  const { theme, isDarkMode, handleThemeChange } = useContext(ThemeContext);
+  const [isOpenChooseTheme, setIsOpenChooseTheme] = useState(false);
 
   const handleClickMenu = () => {
     setIsOpenMenu(!isOpenMenu);
+  };
+
+  const handleClickChooseTheme = () => {
+    setIsOpenChooseTheme(!isOpenChooseTheme);
+  };
+
+  const handleTheme = (e) => {
+    const element = e.target;
+    const id = element.id;
+    const theme = id.split("-")[0];
+    handleThemeChange(theme);
+    setIsOpenChooseTheme(false);
   };
 
   useEffect(() => {
@@ -32,7 +48,7 @@ function App() {
     <div className="dark:bg-[#010208] bg-[#eeeff5] min-h-screen text-white">
       <div className="bg-gradient-to-b dark:from-[#3f89ad] absolute w-[5rem] h-[31.25rem] -rotate-[25deg] left-[9.375rem] -top-[5.938rem] blur-[3.625rem] animate-[pulse_2s_ease-in-out_infinite]"></div>
       <div className="bg-gradient-to-b dark:from-[#3f89ad] absolute w-[7.5rem] h-[50rem] -rotate-[45deg] left-[18.75rem] -top-[11.563rem] blur-[3.625rem] animate-[pulse_3s_ease-in-out_infinite]"></div>
-      <div className="bg-gradient-to-r dark:from-[#3f89ad] absolute w-[31.25rem] h-[5rem] rotate-[25deg] left-[4.688rem] top-[3.125rem] blur-[3.625rem] animate-[pulse_1s_ease-in-out_infinite]"></div>
+      <div className="bg-gradient-to-r dark:from-[#3f89ad]  absolute w-[31.25rem] h-[5rem] rotate-[25deg] left-[4.688rem] top-[3.125rem] blur-[3.625rem] animate-[pulse_1s_ease-in-out_infinite]"></div>
 
       <div className="bg-gradient-to-b dark:from-[#3f89ad] absolute w-[5rem] h-[23.125rem] -rotate-[25deg] left-[53.125rem] -top-[5.938rem] blur-[3.625rem] animate-[pulse_1.5s_ease-in-out_infinite]"></div>
       <div className="bg-gradient-to-b dark:from-[#3f89ad] absolute w-[7.5rem] h-[25rem] -rotate-[45deg] left-[43.75rem] -top-[11.563rem] blur-[3.625rem] animate-[pulse_3.5s_ease-in-out_infinite]"></div>
@@ -49,26 +65,16 @@ function App() {
           <nav
             className={`flex flex-col px-10 py-2 sm:rounded-full max-sm:rounded-3xl max-sm:gap-4 transition-all duration-300 dark:text-white text-[#010208] ${
               scrolled &&
-              "bg-slate-500/20 drop-shadow-[0_0.625rem_0.25rem_rgb(0,0,0)] backdrop-blur-2xl text-white"
+              "bg-[#010208]/30 drop-shadow-[0_0.625rem_0.25rem_rgb(0,0,0)] backdrop-blur-2xl text-white"
             }`}
           >
             <button
               onClick={handleClickMenu}
-              className={`rounded-full flex flex-col items-center px-10 py-2 transition-all duration-300 cursor-pointer w-fit place-self-center sm:hidden ${
-                isOpenMenu ? "" : ""
-              }`}
+              className={`rounded-full flex flex-col items-center px-10 py-2 transition-all duration-300 cursor-pointer w-fit place-self-center sm:hidden`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <g fill="#fff">
-                  <path d="M1 12a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM1 4a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM1 20a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1Z" />
-                </g>
-              </svg>
+              <HamburgerMenuIcon
+                fill={isDarkMode ? "#fff" : scrolled ? "#fff" : "#000"}
+              />
             </button>
             <ul
               className={`flex gap-4 sm:flex-row max-sm:flex-col items-center max-sm:items-center ${
@@ -120,29 +126,45 @@ function App() {
               </li>
               <li>
                 <button
-                  onClick={() => {
-                    setIsOpenChooseTheme(!isOpenChooseTheme);
-                  }}
+                  onClick={handleClickChooseTheme}
+                  className="cursor-pointer"
                 >
-                  <SystemIconDark />
+                  {theme === "dark" ? (
+                    <DarkModeIcon />
+                  ) : theme === "light" ? (
+                    <LightModeIcon
+                      stroke={isDarkMode ? "#fff" : scrolled ? "#fff" : "#000"}
+                    />
+                  ) : (
+                    <SystemIconDark
+                      stroke={isDarkMode ? "#fff" : scrolled ? "#fff" : "#000"}
+                    />
+                  )}
                 </button>
-                <div className="absolute right-0 bg-[#010208] border-[1px] border-gray-700 w-[7rem] py-4 rounded-xl">
+                <div
+                  className={`absolute right-0 dark:bg-[#010208] border-[1px] border-gray-700 w-[7rem] py-4 rounded-xl ${
+                    scrolled && "bg-black/50"
+                  } ${!isOpenChooseTheme && "hidden"}`}
+                >
                   <ul className="">
                     <li
-                      onClick={() => handleThemeChange("dark")}
-                      className="hover:bg-white/50 px-4 py-2 cursor-pointer"
+                      id="dark-theme"
+                      onClick={handleTheme}
+                      className="dark:hover:bg-white/50 hover:bg-black/50 px-4 py-2 cursor-pointer"
                     >
                       Dark
                     </li>
                     <li
-                      onClick={() => handleThemeChange("light")}
-                      className="hover:bg-white/50 px-4 py-2 cursor-pointer"
+                      id="light-theme"
+                      onClick={handleTheme}
+                      className="dark:hover:bg-white/50 hover:bg-black/50 px-4 py-2 cursor-pointer"
                     >
                       Light
                     </li>
                     <li
-                      onClick={() => handleThemeChange("system")}
-                      className="hover:bg-white/50 px-4 py-2 cursor-pointer"
+                      id="system-theme"
+                      onClick={handleTheme}
+                      className="dark:hover:bg-white/50 hover:bg-black/50 px-4 py-2 cursor-pointer"
                     >
                       System
                     </li>

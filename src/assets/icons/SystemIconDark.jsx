@@ -9,7 +9,7 @@ export default function SystemIconDark(props) {
       {...props}
     >
       <path
-        stroke="#fff"
+        stroke={props}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}

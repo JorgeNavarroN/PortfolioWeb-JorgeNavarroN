@@ -19,11 +19,11 @@ export default function LinkReference({ href, children }) {
   };
 
   return (
-    <div className="hover:drop-shadow-[0_0.313rem_0.313rem_rgb(0,0,0)]">
+    <div className="dark:hover:drop-shadow-[0_0.313rem_0.313rem_rgb(0,0,0)] transition-all duration-500 hover:drop-shadow-[0_0.313rem_0.313rem_rgb(0,0,0)]">
       <a
         href={href}
         target="_blank"
-        className="flex flex-row items-center relative justify-center gap-2 py-2 border-1 border-[#063869] rounded-full text-xl hover:-translate-y-1 dark:text-white text-[#010208] dark:hover:bg-[#030303] hover:bg-[#faf9f9] dark:hover:border-[#201b2b] hover:border-[#a68cdf] transition-all duration-200"
+        className="flex flex-row items-center relative justify-center gap-2 py-2 border-1 dark:border-[#063869] border-[#040507] rounded-full text-xl hover:-translate-y-1 dark:text-white text-[#333] dark:hover:bg-[#030303] dark:hover:border-[#201b2b] transition-all duration-200"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
@@ -32,7 +32,7 @@ export default function LinkReference({ href, children }) {
         }}
       >
         <span
-          className="absolute w-40 h-full bg-gradient-to-br dark:from-[#55b7e7] from-[#0e1e25] to-transparent rounded-full blur-2xl"
+          className="absolute w-40 h-full bg-gradient-to-br dark:from-[#55b7e7] from-[#ffffff81] to-transparent rounded-full blur-2xl"
           style={{
             left: position.x - position.x / 2,
             opacity: isVisible ? "50%" : "0%",

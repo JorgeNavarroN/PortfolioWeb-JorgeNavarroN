@@ -1,40 +1,35 @@
-export default function LightModeIcon() {
+export default function LightModeIcon(props) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      viewBox="0 0 24 24"
+      {...props}
+    >
       <g
-        id="SVGRepo_tracerCarrier"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      ></g>
-      <g id="SVGRepo_iconCarrier">
-        {" "}
-        <g
-          clipPath="url(#a)"
-          stroke="#000000"
-          strokeWidth="1.5"
-          strokeMiterlimit="10"
-        >
-          {" "}
-          <path
-            d="M5 12H1M23 12h-4M7.05 7.05 4.222 4.222M19.778 19.778 16.95 16.95M7.05 16.95l-2.828 2.828M19.778 4.222 16.95 7.05"
-            strokeLinecap="round"
-          ></path>{" "}
-          <path
-            d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
-            fill="#000000"
-            fillOpacity=".16"
-          ></path>{" "}
-          <path d="M12 19v4M12 1v4" strokeLinecap="round"></path>{" "}
-        </g>{" "}
-        <defs>
-          {" "}
-          <clipPath id="a">
-            {" "}
-            <path fill="#ffffff" d="M0 0h24v24H0z"></path>{" "}
-          </clipPath>{" "}
-        </defs>{" "}
+        stroke={props}
+        strokeMiterlimit={10}
+        strokeWidth={1.5}
+        clipPath="url(#a)"
+      >
+        <path
+          strokeLinecap="round"
+          d="M5 12H1m22 0h-4M7.05 7.05 4.222 4.222m15.556 15.556L16.95 16.95m-9.9 0-2.828 2.828M19.778 4.222 16.95 7.05"
+        />
+        <path
+          fill="#000"
+          fillOpacity={0.16}
+          d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+        />
+        <path strokeLinecap="round" d="M12 19v4m0-22v4" />
       </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M0 0h24v24H0z" />
+        </clipPath>
+      </defs>
     </svg>
   );
 }

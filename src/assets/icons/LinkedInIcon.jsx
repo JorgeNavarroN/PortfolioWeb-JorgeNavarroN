@@ -5,15 +5,19 @@ export default function LinkedInIcon(props) {
       width={32}
       height={32}
       fill="none"
+      viewBox="0 0 24 24"
       {...props}
     >
-      <path
-        stroke="#000"
+      <g
+        stroke={props}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={3}
-        d="M21.333 10.667a8 8 0 0 1 8 8V28H24v-9.333a2.667 2.667 0 0 0-5.333 0V28h-5.334v-9.333a8 8 0 0 1 8-8ZM8 12H2.667v16H8V12ZM5.333 8a2.667 2.667 0 1 0 0-5.333 2.667 2.667 0 0 0 0 5.333Z"
-      />
+        strokeWidth={2}
+      >
+        <path d="M18 22v-7a2 2 0 1 0-4 0v7h-4" />
+        <path d="M10 22v-7a6 6 0 0 1 12 0v7h-4M3 9h4v13H3z" />
+        <circle cx={5} cy={4} r={2} />
+      </g>
     </svg>
   );
 }

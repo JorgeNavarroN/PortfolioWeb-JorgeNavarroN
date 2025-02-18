@@ -3,9 +3,12 @@ import LinkedInIcon from "../assets/icons/LinkedInIcon";
 import LocationIcon from "../assets/icons/LocationIcon";
 import LinkReference from "./LinkReference";
 import useInitialAnimate from "../hooks/useInitialAnimate";
+import { useContext } from "react";
+import { ThemeContext } from "../assets/contexts/ThemeContext";
 
 export default function Hero() {
   const { isVisible, ref } = useInitialAnimate();
+  const { isDarkMode } = useContext(ThemeContext);
 
   return (
     <section
@@ -23,21 +26,21 @@ export default function Hero() {
             src="https://media.licdn.com/dms/image/v2/D4E03AQH6ljtRcQjfIg/profile-displayphoto-shrink_800_800/B4EZSFQTnIGcAg-/0/1737402432866?e=1744848000&v=beta&t=Sf_Ndq-_FVriR1ndkx2tUNggpUZZiYD77LH1eyJrSyk"
             alt="Foto Jorge Navarro Nuñez 🤓"
           />
-          <h1 className="md:col-start-2 text-[2.5rem] font-medium dark:text-white text-[#010208]">
+          <h1 className="md:col-start-2 text-[2.5rem] font-medium dark:text-white text-[#333]">
             Jorge Navarro Nuñez
           </h1>
-          <p className="xl:col-start-2 lg:col-start-1 sm:col-span-2 max-sm:col-span-2 text-[1.125rem] font-light tracking-[0.25rem] drop-shadow-[0_0.313rem_0.438rem_rgb(0,0,0)] dark:text-white text-[#010208]">
+          <p className="xl:col-start-2 lg:col-start-1 sm:col-span-2 max-sm:col-span-2 text-[1.125rem] font-light tracking-[0.25rem] drop-shadow-[0_0.313rem_0.438rem_rgb(0,0,0)] dark:text-white text-[#333]">
             Técnico en Ingenieria de Software
           </p>
         </div>
-        <p className="text-xl dark:text-white text-[#010208]">
+        <p className="text-xl dark:text-white text-[#333]">
           Desarrollador de software junior.
-          Busco aportar con mis conocimientos y proponer <strong className="font-bold text-[#00c3ff]">soluciones innovadoras </strong>
+          Busco aportar con mis conocimientos y proponer <strong className="font-bold dark:text-[#00c3ff]">soluciones innovadoras </strong>
           en la industria tecnológica.
         </p>
         <div className="flex flex-row items-center gap-5">
-          <LocationIcon fill="#FEF7FF" />
-          <h3 className="text-2xl dark:text-white text-[#010208]">Perú</h3>
+          <LocationIcon fill={isDarkMode ? "#fff" : "#333"} />
+          <h3 className="text-2xl dark:text-white text-[#333]">Perú</h3>
           <img
             src="https://flagsapi.com/PE/flat/32.png"
             alt="Bandera del Perú"
@@ -45,13 +48,13 @@ export default function Hero() {
         </div>
         <div className="grid grid-cols-2 max-sm:flex max-sm:flex-col gap-8">
           <LinkReference href={"https://www.linkedin.com/in/jorgenavarron/"}>
-            <LinkedInIcon />
+            <LinkedInIcon stroke={isDarkMode ? "#fff" : "#333"}/>
             LinkedIn
           </LinkReference>
           <LinkReference
             href={"https://github.com/JorgeNavarroN?tab=repositories"}
           >
-            <GithubIcon />
+            <GithubIcon width={32} stroke={isDarkMode ? "#fff" : "#333"}/>
             GitHub
           </LinkReference>
         </div>
