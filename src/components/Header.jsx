@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <header
-      className={`col-span-2 grid place-self-center items-center h-24 w-fit z-20 fixed top-0`}
+      className={`col-span-2 grid place-self-center items-start mt-6 h-24 w-fit z-20 fixed top-0`}
     >
       <nav
         className={`flex flex-col px-10 py-2 sm:rounded-full max-sm:rounded-3xl max-sm:gap-4 transition-all duration-300 dark:text-white text-[#010208] ${
