@@ -14,10 +14,10 @@ export default function SobreMi() {
       id="sobremi-section"
       className="col-span-2 grid grid-cols-1 gap-8 dark:text-white text-[#333]"
     >
-      <div className="flex flex-row items-center gap-8">
+      <header className="flex flex-row items-center gap-8">
         <UserCheckIcon stroke={isDarkMode ? "#fff" : "#333"} />
         <h2 className="text-3xl font-medium my-10">Sobre mí</h2>
-      </div>
+      </header>
       <main>
         <article className="grid lg:grid-cols-[auto_1fr] max-lg:flex max-lg:flex-col items-center gap-20">
           <div className="relative">

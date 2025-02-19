@@ -10,11 +10,11 @@ export default function Certificaciones({ certificados }) {
   const { isDarkMode } = useContext(ThemeContext);
 
   return (
-    <section className="col-span-2 grid grid-cols-1 gap-8 dark:text-white text-[#333]">
-      <div className="flex flex-row items-center gap-8">
+    <section id="certificaicones-section" className="col-span-2 grid grid-cols-1 gap-8 dark:text-white text-[#333] my-10">
+      <header className="flex flex-row items-center gap-8">
         <AwardIcon stroke={isDarkMode ? "#fff" : "#333"} />
         <h2 className="text-3xl font-medium">Certificaciones</h2>
-      </div>
+      </header>
       <Swiper
         effect="cards"
         grabCursor={true}

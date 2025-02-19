@@ -11,10 +11,10 @@ export default function Proyectos() {
       id="proyectos-section"
       className="col-span-2 row-start-2 grid grid-cols-1 gap-8 my-10 dark:text-white text-[#333]"
     >
-      <div className="flex flex-row items-center gap-8">
+      <header className="flex flex-row items-center gap-8">
         <FolderIcon stroke={isDarkMode ? "#fff" : "#333"} />
         <h2 className="text-3xl font-medium my-10">Proyectos</h2>
-      </div>
+      </header>
       <ul className="flex flex-col gap-20">
         <li className="grid xl:grid-cols-2 gap-20">
           <Proyecto
