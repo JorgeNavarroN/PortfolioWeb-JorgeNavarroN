@@ -8,9 +8,9 @@ export default function Experiencia() {
 
   return (
     <section id="experiencia-section" className="max-sm:col-start-1">
-      <div className="flex flex-row items-center gap-8">
+      <div className="flex flex-row sm:items-center sm:gap-8 max-sm:flex-col">
         <BriefcaseIcon stroke={isDarkMode ? "#fff" : "#333"} />
-        <h2 className="xl:text-3xl lg:text-2xl font-medium my-10 dark:text-white text-[#333]">
+        <h2 className="text-3xl font-medium my-10 dark:text-white text-[#333]">
           Experiencia Pre - Profesional
         </h2>
       </div>

@@ -6,13 +6,11 @@ import Proyectos from "./components/Proyectos.jsx";
 import SobreMi from "./components/SobreMi.jsx";
 import useScroll from "./hooks/useScroll.js";
 import { useState } from "react";
-import { useEffect } from "react";
 import { useContext } from "react";
 import { ThemeContext } from "./assets/contexts/ThemeContext.jsx";
 import SystemIconDark from "./assets/icons/SystemIconDark.jsx";
 import DarkModeIcon from "./assets/icons/DarkModeIcon.jsx";
 import LightModeIcon from "./assets/icons/LightModeIcon.jsx";
-import { useCallback } from "react";
 import HamburgerMenuIcon from "./assets/icons/HamburgerMenuIcon.jsx";
 
 function App() {
@@ -37,15 +35,8 @@ function App() {
     setIsOpenChooseTheme(false);
   };
 
-  useEffect(() => {
-    document.body.classList.add("overflow-x-hidden");
-    return () => {
-      document.body.classList.remove("overflow-x-hidden");
-    };
-  }, []);
-
   return (
-    <div className="dark:bg-[#010208] bg-[#eeeff5] min-h-screen text-white">
+    <div className="dark:bg-[#010208] relative bg-[#eeeff5] min-h-screen overflow-hidden text-white">
       <div className="bg-gradient-to-b dark:from-[#3f89ad] absolute w-[5rem] h-[31.25rem] -rotate-[25deg] left-[9.375rem] -top-[5.938rem] blur-[3.625rem] animate-[pulse_2s_ease-in-out_infinite]"></div>
       <div className="bg-gradient-to-b dark:from-[#3f89ad] absolute w-[7.5rem] h-[50rem] -rotate-[45deg] left-[18.75rem] -top-[11.563rem] blur-[3.625rem] animate-[pulse_3s_ease-in-out_infinite]"></div>
       <div className="bg-gradient-to-r dark:from-[#3f89ad]  absolute w-[31.25rem] h-[5rem] rotate-[25deg] left-[4.688rem] top-[3.125rem] blur-[3.625rem] animate-[pulse_1s_ease-in-out_infinite]"></div>
@@ -60,12 +51,12 @@ function App() {
 
       <div className="grid grid-cols-1 xl:w-[75rem] xl:min-w-[75rem] lg:w-[60rem] lg:min-w-[60rem] md:w-[45rem] md:min-w-[45rem] sm:w-[35rem] sm:min-w-[35rem] max-sm:w-[20rem] max-sm:min-w-[20rem] mx-auto">
         <header
-          className={`col-span-2 grid place-self-center items-center h-24 w-fit z-20 sticky top-0`}
+          className={`col-span-2 grid place-self-center items-center h-24 w-fit z-20 fixed top-0`}
         >
           <nav
             className={`flex flex-col px-10 py-2 sm:rounded-full max-sm:rounded-3xl max-sm:gap-4 transition-all duration-300 dark:text-white text-[#010208] ${
               scrolled &&
-              "bg-[#010208]/30 drop-shadow-[0_0.625rem_0.25rem_rgb(0,0,0)] backdrop-blur-2xl text-white"
+              "bg-[#eeeff5]/60 dark:bg-[#010208]/40 drop-shadow-[0_0.5rem_0.7rem_rgb(0,0,0)] backdrop-blur-2xl"
             }`}
           >
             <button
@@ -83,9 +74,7 @@ function App() {
             >
               <li className="relative">
                 <a
-                  className={`after:bottom-0 after:block after:absolute after:h-[0.125rem] after:w-[0rem] dark:after:bg-white after:bg-black after:backdrop-blur-2xl hover:after:w-[100%] after:transition-all ${
-                    scrolled && "after:bg-white"
-                  }`}
+                  className={`after:bottom-0 after:block after:absolute after:h-[0.125rem] after:w-[0rem] dark:after:bg-[#eeeff5] after:bg-[#333] after:backdrop-blur-2xl hover:after:w-[100%] after:transition-all`}
                   href="#experiencia-section"
                   onClick={(e) => handleClickNavItem(e, "experiencia-section")}
                 >
@@ -94,9 +83,7 @@ function App() {
               </li>
               <li className="relative">
                 <a
-                  className={`after:bottom-0 after:block after:absolute after:h-[0.125rem] after:w-[0rem] dark:after:bg-white after:bg-black after:backdrop-blur-2xl hover:after:w-[100%] after:transition-all ${
-                    scrolled && "after:bg-white"
-                  }`}
+                  className={`after:bottom-0 after:block after:absolute after:h-[0.125rem] after:w-[0rem] dark:after:bg-white after:bg-[#333] after:backdrop-blur-2xl hover:after:w-[100%] after:transition-all`}
                   href="#proyectos-section"
                   onClick={(e) => handleClickNavItem(e, "proyectos-section")}
                 >
@@ -105,9 +92,7 @@ function App() {
               </li>
               <li className="relative">
                 <a
-                  className={`after:bottom-0 after:block after:absolute after:h-[0.125rem] after:w-[0rem] dark:after:bg-white after:bg-black after:backdrop-blur-2xl hover:after:w-[100%] after:transition-all ${
-                    scrolled && "after:bg-white"
-                  }`}
+                  className={`after:bottom-0 after:block after:absolute after:h-[0.125rem] after:w-[0rem] dark:after:bg-white after:bg-[#333] after:backdrop-blur-2xl hover:after:w-[100%] after:transition-all`}
                   href="#sobremi-section"
                   onClick={(e) => handleClickNavItem(e, "sobremi-section")}
                 >
@@ -116,9 +101,7 @@ function App() {
               </li>
               <li className="relative">
                 <a
-                  className={`after:bottom-0 after:block after:absolute after:h-[0.125rem] after:w-[0rem] dark:after:bg-white after:bg-black after:backdrop-blur-2xl hover:after:w-[100%] after:transition-all ${
-                    scrolled && "after:bg-white"
-                  }`}
+                  className={`after:bottom-0 after:block after:absolute after:h-[0.125rem] after:w-[0rem] dark:after:bg-white after:bg-[#333] after:backdrop-blur-2xl hover:after:w-[100%] after:transition-all`}
                   href="mailto:jorgenavarron4082@outlook.com"
                 >
                   Contactame
@@ -132,39 +115,33 @@ function App() {
                   {theme === "dark" ? (
                     <DarkModeIcon />
                   ) : theme === "light" ? (
-                    <LightModeIcon
-                      stroke={isDarkMode ? "#fff" : scrolled ? "#fff" : "#000"}
-                    />
+                    <LightModeIcon stroke={isDarkMode ? "#fff" : "#333"} />
                   ) : (
-                    <SystemIconDark
-                      stroke={isDarkMode ? "#fff" : scrolled ? "#fff" : "#000"}
-                    />
+                    <SystemIconDark stroke={isDarkMode ? "#fff" : "#333"} />
                   )}
                 </button>
                 <div
-                  className={`absolute right-0 dark:bg-[#010208] border-[1px] border-gray-700 w-[7rem] py-4 rounded-xl ${
-                    scrolled && "bg-black/50"
-                  } ${!isOpenChooseTheme && "hidden"}`}
+                  className={`absolute right-0 bg-[#eeeff5]/80 dark:bg-[#010208] border-[1px] border-gray-700 w-[7rem] py-4 rounded-xl ${!isOpenChooseTheme && "hidden"}`}
                 >
                   <ul className="">
                     <li
                       id="dark-theme"
                       onClick={handleTheme}
-                      className="dark:hover:bg-white/50 hover:bg-black/50 px-4 py-2 cursor-pointer"
+                      className="dark:hover:bg-white/50 hover:bg-black/30 px-4 py-2 cursor-pointer"
                     >
                       Dark
                     </li>
                     <li
                       id="light-theme"
                       onClick={handleTheme}
-                      className="dark:hover:bg-white/50 hover:bg-black/50 px-4 py-2 cursor-pointer"
+                      className="dark:hover:bg-white/50 hover:bg-black/30 px-4 py-2 cursor-pointer"
                     >
                       Light
                     </li>
                     <li
                       id="system-theme"
                       onClick={handleTheme}
-                      className="dark:hover:bg-white/50 hover:bg-black/50 px-4 py-2 cursor-pointer"
+                      className="dark:hover:bg-white/50 hover:bg-black/30 px-4 py-2 cursor-pointer"
                     >
                       System
                     </li>
@@ -175,7 +152,7 @@ function App() {
           </nav>
         </header>
 
-        <main className="z-10 grid lg:grid-cols-2 max-lg:flex max-lg:flex-col gap-x-20 gap-y-52">
+        <main className="z-10 grid lg:grid-cols-2 mt-20 max-lg:flex max-lg:flex-col gap-x-20 gap-y-52">
           {/* HERO */}
           <Hero />
 
