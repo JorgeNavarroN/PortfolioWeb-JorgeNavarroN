@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import useMoveMouse from "../hooks/useMoveMouse";
 
-export default function LinkReference({ href, children }) {
+export default function LinkReference({ href, children, file, isDownloaded }) {
   const [position, isVisible, handleMouseMove, handleMouseLeave] =
     useMoveMouse();
 
@@ -15,11 +15,12 @@ export default function LinkReference({ href, children }) {
       style={{
         WebkitMaskImage: "radial-gradient(circle, white 100%, transparent 50%)",
       }}
+      download={isDownloaded && file}
     >
       <span
         className="absolute w-40 h-full dark:bg-gradient-to-br bg-gradient-to-bl from-[#ffffff]/40 dark:from-[#55b7e7] to-transparent rounded-full dark:blur-xl -z-20 blur-xl"
         style={{
-          left: position.x - position.x / 2,
+          left: position.x - 10,
           opacity: isVisible ? "50%" : "0%",
           transition: "all 0.3s ease-in-out",
         }}

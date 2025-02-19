@@ -5,6 +5,7 @@ import LinkReference from "./LinkReference";
 import useInitialAnimate from "../hooks/useInitialAnimate";
 import { useContext } from "react";
 import { ThemeContext } from "../assets/contexts/ThemeContext";
+import DocumentIcon from "../assets/icons/DocumentIcon";
 
 export default function Hero() {
   const { isVisible, ref } = useInitialAnimate();
@@ -29,7 +30,7 @@ export default function Hero() {
           <h1 className="md:col-start-2 text-[2.5rem] font-medium dark:text-white text-[#333]">
             Jorge Navarro Nuñez
           </h1>
-          <p className="xl:col-start-2 lg:col-start-1 sm:col-span-2 max-sm:col-span-2 text-[1.125rem] font-light tracking-[0.25rem] drop-shadow-[0_0.313rem_0.438rem_rgb(0,0,0)] dark:text-white text-[#333]">
+          <p className="xl:col-start-2 lg:col-start-2 max-sm:col-span-2 text-[1.125rem] font-light tracking-[0.25rem] drop-shadow-[0_0.313rem_0.438rem_rgb(0,0,0)] dark:text-white text-[#333]">
             Técnico en Ingenieria de Software
           </p>
         </header>
@@ -51,7 +52,7 @@ export default function Hero() {
             />
           </div>
         </main>
-        <footer className="grid grid-cols-2 max-sm:flex max-sm:flex-col gap-8">
+        <footer className="flex flex-col gap-8">
           <LinkReference href={"https://www.linkedin.com/in/jorgenavarron/"}>
             <LinkedInIcon stroke={isDarkMode ? "#fff" : "#333"} />
             LinkedIn
@@ -61,6 +62,14 @@ export default function Hero() {
           >
             <GithubIcon width={32} stroke={isDarkMode ? "#fff" : "#333"} />
             GitHub
+          </LinkReference>
+          <LinkReference
+            href={"/files/JORGENAVARRON.pdf"}
+            file={"CV_JORGENAVARRON.pdf"}
+            isDownloaded
+          >
+            <DocumentIcon width={32} stroke={isDarkMode ? "#fff" : "#333"} />
+            Descargar CV
           </LinkReference>
         </footer>
       </article>
