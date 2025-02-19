@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/cloudinary/images/*"
+  to = "https://res.cloudinary.com/dl1fugaha/image/upload/"
+  status = 200
+  force = true
