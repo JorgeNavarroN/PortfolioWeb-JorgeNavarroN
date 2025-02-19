@@ -9,6 +9,11 @@ import Footer from "./components/Footer.jsx";
 
 const certificados = [
   {
+    id: "v1739997489",
+    src: "/cloudinary/images/v1739997489/Python_Essentials_2_Badge20230709-28-exiej0_page-0001_qkclhp.jpg",
+    alt: "Python Essentials 2",
+  },
+  {
     id: "v1739710315",
     src: "/cloudinary/images/v1739710315/course_certificate_JAVA_FUNDAMENTALS_page-0001_tzjfny.jpg",
     alt: "Certificado Java Fundamentals",

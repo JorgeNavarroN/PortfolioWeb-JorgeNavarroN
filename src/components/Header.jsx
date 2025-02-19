@@ -29,13 +29,11 @@ export default function Header() {
           onClick={handleClickMenu}
           className={`rounded-full flex flex-col items-center px-10 py-2 transition-all duration-300 cursor-pointer w-fit place-self-center sm:hidden`}
         >
-          <HamburgerMenuIcon
-            fill={isDarkMode ? "#fff" : "#000"}
-          />
+          <HamburgerMenuIcon fill={isDarkMode ? "#fff" : "#000"} />
         </button>
         <ul
-          className={`flex gap-4 sm:flex-row max-sm:flex-col items-center max-sm:items-center ${
-            !isOpenMenu ? "max-sm:hidden" : ""
+          className={`flex gap-4 sm:flex-row max-sm:flex-col transition-all duration-300 max-sm:items-center ${
+            !isOpenMenu && "max-sm:hidden"
           }`}
         >
           <li className="relative">

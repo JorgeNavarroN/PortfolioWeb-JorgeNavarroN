@@ -18,9 +18,9 @@ export default function LinkReference({ href, children, file, isDownloaded }) {
       download={isDownloaded && file}
     >
       <span
-        className="absolute w-40 h-full dark:bg-gradient-to-br bg-gradient-to-bl from-[#ffffff]/40 dark:from-[#55b7e7] to-transparent rounded-full dark:blur-xl -z-20 blur-xl"
+        className="absolute w-60 h-full bg-gradient-to-bl from-[#ffffff]/40 dark:bg-[#55b7e7] to-transparent rounded-full -z-20 blur-3xl"
         style={{
-          left: position.x - 10,
+          left: position.x - position.x/2,
           opacity: isVisible ? "50%" : "0%",
           transition: "all 0.3s ease-in-out",
         }}
@@ -33,4 +33,6 @@ export default function LinkReference({ href, children, file, isDownloaded }) {
 LinkReference.propTypes = {
   href: PropTypes.string.isRequired,
   children: PropTypes.node,
+  file: PropTypes.string,
+  isDownloaded: PropTypes.bool,
 };
