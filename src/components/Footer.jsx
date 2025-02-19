@@ -1,6 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="col-span-2 grid md:grid-cols-2 md:place-self-center md:items-center h-[9rem] sm:flex-col sm:text-center max-sm:text-center sm:gap-8 max-sm:gap-8">
+    <footer className="col-span-2 grid md:grid-cols-2 md:place-self-center md:items-center my-10
+     sm:flex-col sm:text-center max-sm:text-center sm:gap-8 max-sm:gap-8">
       <ul className="flex md:flex-row max-sm:flex-col sm:flex-col gap-8">
         <li>
           <a

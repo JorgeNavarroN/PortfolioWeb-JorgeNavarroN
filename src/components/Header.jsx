@@ -30,7 +30,7 @@ export default function Header() {
           className={`rounded-full flex flex-col items-center px-10 py-2 transition-all duration-300 cursor-pointer w-fit place-self-center sm:hidden`}
         >
           <HamburgerMenuIcon
-            fill={isDarkMode ? "#fff" : scrolled ? "#fff" : "#000"}
+            fill={isDarkMode ? "#fff" : "#000"}
           />
         </button>
         <ul
