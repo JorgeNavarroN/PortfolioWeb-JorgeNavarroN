@@ -32,7 +32,7 @@ export default function Header() {
           <HamburgerMenuIcon fill={isDarkMode ? "#fff" : "#000"} />
         </button>
         <ul
-          className={`flex gap-4 sm:flex-row max-sm:flex-col transition-all duration-300 max-sm:items-center ${
+          className={`flex gap-4 sm:flex-row items-center max-sm:flex-col transition-all duration-300 max-sm:items-center ${
             !isOpenMenu && "max-sm:hidden"
           }`}
         >
@@ -83,11 +83,11 @@ export default function Header() {
           <li>
             <button onClick={handleClickChooseTheme} className="cursor-pointer">
               {theme === "dark" ? (
-                <DarkModeIcon />
+                <DarkModeIcon width={32} height={32} stroke={isDarkMode ? "#fff" : "#333"}/>
               ) : theme === "light" ? (
-                <LightModeIcon stroke={isDarkMode ? "#fff" : "#333"} />
+                <LightModeIcon width={32} height={32} stroke={isDarkMode ? "#fff" : "#333"} />
               ) : (
-                <SystemIconDark stroke={isDarkMode ? "#fff" : "#333"} />
+                <SystemIconDark width={32} height={32} stroke={isDarkMode ? "#fff" : "#333"} />
               )}
             </button>
             <div
