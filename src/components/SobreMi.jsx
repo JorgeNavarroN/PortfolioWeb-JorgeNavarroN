@@ -39,7 +39,7 @@ export default function SobreMi() {
             ></div>
             <div
               ref={ref3}
-              className={`w-[18rem] h-[18rem] duration-[500ms] dark:bg-[#061b36] bg-[#4b4b4b] rounded-xl absolute top-8 -right-8 -rotate- -z-20 drop-shadow-[0_0.3rem_0.6rem_rgb(0,0,0)] ${
+              className={`w-[18rem] h-[18rem] duration-[500ms] dark:bg-[#061b36] bg-[#4b4b4b] rounded-xl absolute top-8 -right-8 -rotate-2 -z-20 drop-shadow-[0_0.3rem_0.6rem_rgb(0,0,0)] ${
                 isVisible3 ? "opacity-100" : "opacity-0"
               }`}
             ></div>
