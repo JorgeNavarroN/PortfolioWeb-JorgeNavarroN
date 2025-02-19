@@ -26,7 +26,7 @@ export default function Proyectos() {
             description={
               "Portafolio web para Bruno Navarro, con el objetivo de resaltar su experiencia profesional y proyectos de manera clara y atractiva. La página cuenta con un diseño moderno y responsivo, garantizando una excelente experiencia en cualquier dispositivo."
             }
-            linkRepository={"https://github.com/JorgeNavarroN/Dodge-Car-rep"}
+            linkRepository={"https://github.com/JorgeNavarroN/PortfolioWeb-JorgeNavarroN"}
             linkPreview={"https://brunonavdev.netlify.app/"}
             tecnologias={["html", "tailwindcss", "javascript"]}
           />
