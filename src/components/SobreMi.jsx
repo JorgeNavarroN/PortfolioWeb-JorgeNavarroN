@@ -23,8 +23,8 @@ export default function SobreMi() {
           <div className="relative">
             <img
               ref={ref1}
-              width={288}
-              height={288}
+              width={272}
+              height={272}
               className={`rounded-xl transition-all duration-[1500ms] drop-shadow-[0_0.3rem_0.6rem_rgb(0,0,0)] ${
                 isVisible1 ? "opacity-100" : "opacity-0"
               }`}
@@ -33,13 +33,13 @@ export default function SobreMi() {
             />
             <div
               ref={ref2}
-              className={`w-[18rem] h-[18rem] duration-[1000ms] dark:bg-[#144257] bg-[#919191] rounded-xl absolute top-4 right-8 rotate-2 -z-10 drop-shadow-[0_0.3rem_0.6rem_rgb(0,0,0)] ${
+              className={`w-[17rem] h-[17rem] duration-[1000ms] dark:bg-[#144257] bg-[#919191] rounded-xl absolute top-4 right-4 rotate-2 -z-10 drop-shadow-[0_0.3rem_0.6rem_rgb(0,0,0)] ${
                 isVisible2 ? "opacity-100" : "opacity-0"
               }`}
             ></div>
             <div
               ref={ref3}
-              className={`w-[18rem] h-[18rem] duration-[500ms] dark:bg-[#061b36] bg-[#4b4b4b] rounded-xl absolute top-8 -right-8 -rotate-2 -z-20 drop-shadow-[0_0.3rem_0.6rem_rgb(0,0,0)] ${
+              className={`w-[17rem] h-[17rem] duration-[500ms] dark:bg-[#061b36] bg-[#4b4b4b] rounded-xl absolute top-8 -right-4 -rotate-2 -z-20 drop-shadow-[0_0.3rem_0.6rem_rgb(0,0,0)] ${
                 isVisible3 ? "opacity-100" : "opacity-0"
               }`}
             ></div>
