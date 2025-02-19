@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/cloudinary/images/*"
-  to = "https://res.cloudinary.com/dl1fugaha/image/upload/"
+  to = "https://res.cloudinary.com/dl1fugaha/image/upload/:splat"
   status = 200
   force = true
