@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types'
 
 export default function LinkReference({ href, children }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -19,7 +20,7 @@ export default function LinkReference({ href, children }) {
   };
 
   return (
-    <div className="dark:hover:drop-shadow-[0_0.313rem_0.313rem_rgb(0,0,0)] transition-all duration-500 hover:drop-shadow-[0_0.313rem_0.313rem_rgb(0,0,0)]">
+    <div className="dark:hover:drop-shadow-[0_0.313rem_0.313rem_rgb(0,0,0)] transition-all duration-500 hover:drop-shadow-[0_0.5rem_0.2rem_rgb(0,0,0)]">
       <a
         href={href}
         target="_blank"
@@ -43,4 +44,9 @@ export default function LinkReference({ href, children }) {
       </a>
     </div>
   );
+}
+
+LinkReference.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node,
 }

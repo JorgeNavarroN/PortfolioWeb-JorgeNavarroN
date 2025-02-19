@@ -5,6 +5,7 @@ import { tecnologies } from "../../services/tecnologies.jsx";
 import useInitialAnimate from "../../hooks/useInitialAnimate.js";
 import { useContext } from "react";
 import { ThemeContext } from "../../assets/contexts/ThemeContext.jsx";
+import PropTypes from "prop-types";
 
 export default function Proyecto({
   nameClass,
@@ -69,3 +70,13 @@ export default function Proyecto({
     </>
   );
 }
+
+Proyecto.propTypes = {
+  nameClass: PropTypes.string,
+  imageURL: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tecnologias: PropTypes.arrayOf(PropTypes.string).isRequired,
+  linkRepository: PropTypes.string.isRequired,
+  linkPreview: PropTypes.string.isRequired,
+};

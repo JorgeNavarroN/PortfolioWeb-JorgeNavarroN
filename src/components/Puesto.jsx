@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import useInitialAnimate from "../hooks/useInitialAnimate";
 
 export default function Puesto({
@@ -11,7 +12,12 @@ export default function Puesto({
   const { isVisible, ref } = useInitialAnimate();
   return (
     <>
-      <article ref={ref} className={`dark:text-white text-[#333] flex flex-col gap-4 relative pb-20 transition-all ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20" }`}>
+      <article
+        ref={ref}
+        className={`dark:text-white text-[#333] flex flex-col gap-4 relative pb-20 transition-all ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+        }`}
+      >
         <header className="">
           <h3 className="text-[2rem] font-medium">{workstation}</h3>
           <p className="text-[1.5rem]">{company}</p>
@@ -41,3 +47,12 @@ export default function Puesto({
     </>
   );
 }
+
+Puesto.propTypes = {
+  workstation: PropTypes.string.isRequired,
+  company: PropTypes.string.isRequired,
+  startDate: PropTypes.string.isRequired,
+  endDate: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  isLast: PropTypes.bool,
+};

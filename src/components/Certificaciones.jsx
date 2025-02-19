@@ -4,31 +4,10 @@ import "swiper/css";
 import { EffectCards } from "swiper/modules";
 import { useContext } from "react";
 import { ThemeContext } from "../assets/contexts/ThemeContext.jsx";
+import PropTypes from "prop-types";
 
-export default function Certificaciones() {
+export default function Certificaciones({ certificados }) {
   const { isDarkMode } = useContext(ThemeContext);
-  const certificados = [
-    {
-      id: "v1739710315",
-      src: "/cloudinary/images/v1739710315/course_certificate_JAVA_FUNDAMENTALS_page-0001_tzjfny.jpg",
-      alt: "Certificado Java Fundamentals",
-    },
-    {
-      id: "v1739710625",
-      src: "/cloudinary/images/v1739710625/course_certificate_DATABASE_FOUNDATION_page-0001_lml4d6.jpg",
-      alt: "Certificado Database Foundations",
-    },
-    {
-      id: "v1739710609",
-      src: "/cloudinary/images/v1739710609/course_certificate_JAVA_FOUNDATIONS_page-0001_z1ixwj.jpg",
-      alt: "Java Foundations",
-    },
-    {
-      id: "v1739710617",
-      src: "/cloudinary/images/v1739710617/course_certificate_DATABASE_PROGRAMING_WITH_SQL_page-0001_ghiqzp.jpg",
-      alt: "Database Programming with SQL",
-    },
-  ];
 
   return (
     <section className="col-span-2 grid grid-cols-1 gap-8 dark:text-white text-[#333]">
@@ -55,3 +34,7 @@ export default function Certificaciones() {
     </section>
   );
 }
+
+Certificaciones.propTypes = {
+  certificados: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

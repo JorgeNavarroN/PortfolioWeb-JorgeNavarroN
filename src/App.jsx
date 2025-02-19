@@ -13,6 +13,29 @@ import DarkModeIcon from "./assets/icons/DarkModeIcon.jsx";
 import LightModeIcon from "./assets/icons/LightModeIcon.jsx";
 import HamburgerMenuIcon from "./assets/icons/HamburgerMenuIcon.jsx";
 
+const certificados = [
+  {
+    id: "v1739710315",
+    src: "/cloudinary/images/v1739710315/course_certificate_JAVA_FUNDAMENTALS_page-0001_tzjfny.jpg",
+    alt: "Certificado Java Fundamentals",
+  },
+  {
+    id: "v1739710625",
+    src: "/cloudinary/images/v1739710625/course_certificate_DATABASE_FOUNDATION_page-0001_lml4d6.jpg",
+    alt: "Certificado Database Foundations",
+  },
+  {
+    id: "v1739710609",
+    src: "/cloudinary/images/v1739710609/course_certificate_JAVA_FOUNDATIONS_page-0001_z1ixwj.jpg",
+    alt: "Java Foundations",
+  },
+  {
+    id: "v1739710617",
+    src: "/cloudinary/images/v1739710617/course_certificate_DATABASE_PROGRAMING_WITH_SQL_page-0001_ghiqzp.jpg",
+    alt: "Database Programming with SQL",
+  },
+];
+
 function App() {
   const [scrolled, handleClickNavItem] = useScroll();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -121,7 +144,9 @@ function App() {
                   )}
                 </button>
                 <div
-                  className={`absolute right-0 bg-[#eeeff5]/80 dark:bg-[#010208] border-[1px] border-gray-700 w-[7rem] py-4 rounded-xl ${!isOpenChooseTheme && "hidden"}`}
+                  className={`absolute right-0 bg-[#eeeff5]/80 dark:bg-[#010208] border-[1px] border-gray-700 w-[7rem] py-4 rounded-xl ${
+                    !isOpenChooseTheme && "hidden"
+                  }`}
                 >
                   <ul className="">
                     <li
@@ -162,7 +187,7 @@ function App() {
           {/* EXTRA */}
           <Proyectos />
 
-          <Certificaciones />
+          <Certificaciones certificados={certificados} />
 
           <SobreMi />
         </main>

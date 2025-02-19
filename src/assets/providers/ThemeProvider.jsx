@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { ThemeContext } from "../contexts/ThemeContext.jsx";
+import PropTypes from 'prop-types'
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "system");
@@ -40,4 +41,8 @@ export function ThemeProvider({ children }) {
       {children}
     </ThemeContext.Provider>
   );
+}
+
+ThemeProvider.propTypes = {
+  children: PropTypes.node
 }
