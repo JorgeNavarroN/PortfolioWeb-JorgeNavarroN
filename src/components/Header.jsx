@@ -1,12 +1,9 @@
 import { useContext } from "react";
 import { ThemeContext } from "../assets/contexts/ThemeContext";
 import useScroll from "../hooks/useScroll";
-import HamburgerMenuIcon from "../assets/icons/HamburgerMenuIcon";
 import useOpenMenu from "../hooks/useOpenMenu";
-import DarkModeIcon from "../assets/icons/DarkModeIcon";
-import LightModeIcon from "../assets/icons/LightModeIcon";
-import SystemIconDark from "../assets/icons/SystemIconDark";
 import useChooseTheme from "../hooks/useChooseTheme";
+import { DarkModeIcon, HamburgerMenuIcon, LightModeIcon, SystemIconDark } from "./Icons";
 
 export default function Header() {
   const { theme, isDarkMode } = useContext(ThemeContext);

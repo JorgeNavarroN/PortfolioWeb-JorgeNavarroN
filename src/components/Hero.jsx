@@ -1,11 +1,8 @@
-import GithubIcon from "../assets/icons/GithubIcon";
-import LinkedInIcon from "../assets/icons/LinkedInIcon";
-import LocationIcon from "../assets/icons/LocationIcon";
 import LinkReference from "./LinkReference";
 import useInitialAnimate from "../hooks/useInitialAnimate";
 import { useContext } from "react";
 import { ThemeContext } from "../assets/contexts/ThemeContext";
-import DocumentIcon from "../assets/icons/DocumentIcon";
+import { DocumentIcon, GithubIcon, LinkedInIcon, LocationIcon } from "./Icons";
 
 export default function Hero() {
   const { isVisible, ref } = useInitialAnimate();

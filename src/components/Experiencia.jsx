@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import BriefcaseIcon from "../assets/icons/BriefcaseIcon";
 import Puesto from "./Puesto";
 import { ThemeContext } from "../assets/contexts/ThemeContext";
+import { BriefcaseIcon } from "./Icons";
 
 export default function Experiencia() {
   const { isDarkMode } = useContext(ThemeContext);

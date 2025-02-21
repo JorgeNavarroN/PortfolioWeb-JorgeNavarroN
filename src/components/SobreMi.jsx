@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import UserCheckIcon from "../assets/icons/UserCheckIcon";
 import useInitialAnimate from "../hooks/useInitialAnimate";
 import { ThemeContext } from "../assets/contexts/ThemeContext";
+import { UserCheckIcon } from "./Icons";
 
 export default function SobreMi() {
   const { isVisible: isVisible1, ref: ref1 } = useInitialAnimate();

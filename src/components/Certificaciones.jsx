@@ -1,10 +1,10 @@
-import AwardIcon from "../assets/icons/AwardIcon";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { EffectCards } from "swiper/modules";
 import { useContext } from "react";
 import { ThemeContext } from "../assets/contexts/ThemeContext.jsx";
 import PropTypes from "prop-types";
+import { AwardIcon } from "./Icons.jsx";
 
 export default function Certificaciones({ certificados }) {
   const { isDarkMode } = useContext(ThemeContext);

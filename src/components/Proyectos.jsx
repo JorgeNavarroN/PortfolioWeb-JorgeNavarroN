@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import FolderIcon from "../assets/icons/FolderIcon";
 import Proyecto from "./Proyectos/Proyecto";
 import { ThemeContext } from "../assets/contexts/ThemeContext";
+import { FolderIcon } from "./Icons";
 
 export default function Proyectos() {
   const { isDarkMode } = useContext(ThemeContext);
