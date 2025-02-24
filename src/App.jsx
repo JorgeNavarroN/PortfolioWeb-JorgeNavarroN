@@ -37,7 +37,7 @@ const certificados = [
 
 function App() {
   return (
-    <div className="dark:bg-[#010208] relative bg-[#f6b4cd] min-h-screen overflow-hidden text-white">
+    <div className="dark:bg-[#010208] relative bg-[#eeeff5] min-h-screen overflow-hidden text-white">
       <div className="bg-gradient-to-b dark:from-[#3f89ad] absolute w-[5rem] h-[31.25rem] -rotate-[25deg] left-[9.375rem] -top-[5.938rem] blur-[3.625rem] animate-[pulse_2s_ease-in-out_infinite]"></div>
       <div className="bg-gradient-to-b dark:from-[#3f89ad] absolute w-[7.5rem] h-[50rem] -rotate-[45deg] left-[18.75rem] -top-[11.563rem] blur-[3.625rem] animate-[pulse_3s_ease-in-out_infinite]"></div>
       <div className="bg-gradient-to-r dark:from-[#3f89ad] absolute w-[31.25rem] h-[5rem] rotate-[25deg] left-[4.688rem] top-[3.125rem] blur-[3.625rem] animate-[pulse_1s_ease-in-out_infinite]"></div>
