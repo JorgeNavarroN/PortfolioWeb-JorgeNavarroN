@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Proyecto from "./Proyectos/Proyecto";
+import Proyecto from "./Proyecto";
 import { ThemeContext } from "../assets/contexts/ThemeContext";
 import { FolderIcon } from "./Icons";
 

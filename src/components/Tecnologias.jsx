@@ -1,4 +1,4 @@
-import { CSSIcon, HTMLIcon, JavaScriptIcon, PythonIcon, ReactIcon, TailwindCSSIcon } from "../Icons";
+import { CSSIcon, HTMLIcon, JavaScriptIcon, PythonIcon, ReactIcon, TailwindCSSIcon } from "./Icons";
 
 export function PythonTec() {
   return (

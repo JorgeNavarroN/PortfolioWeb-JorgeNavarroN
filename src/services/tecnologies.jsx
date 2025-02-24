@@ -5,7 +5,7 @@ import {
   PythonTec,
   ReactTec,
   TailwindCSSTec,
-} from "../components/Tecnologias/Tecnologias";
+} from "../components/Tecnologias";
 
 export const tecnologies = {
   python: { id: 12345, element: (() => <PythonTec />)() },

@@ -1,10 +1,10 @@
-import LinkReference from "../LinkReference";
-import { tecnologies } from "../../services/tecnologies.jsx";
-import useInitialAnimate from "../../hooks/useInitialAnimate.js";
+import LinkReference from "./LinkReference.jsx";
+import { tecnologies } from "../services/tecnologies.jsx";
+import useInitialAnimate from "../hooks/useInitialAnimate.js";
 import { useContext } from "react";
-import { ThemeContext } from "../../assets/contexts/ThemeContext.jsx";
+import { ThemeContext } from "../assets/contexts/ThemeContext.jsx";
 import PropTypes from "prop-types";
-import { GithubIcon, LinkIcon } from "../Icons.jsx";
+import { Github, LinkIcon } from "./Icons.jsx";
 
 export default function Proyecto({
   nameClass,
@@ -46,7 +46,7 @@ export default function Proyecto({
         <footer className="grid sm:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-y-[1.25rem] gap-x-[1.25rem]">
           {linkRepository && (
             <LinkReference href={linkRepository}>
-              <GithubIcon
+              <Github
                 fill={isDarkMode ? "#fff" : "#333"}
                 width={32}
                 height={32}
