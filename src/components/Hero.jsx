@@ -21,7 +21,7 @@ export default function Hero() {
             className="rounded-full sm:row-span-2 max-sm:col-span-2"
             width={82}
             height={82}
-            src="https://media.licdn.com/dms/image/v2/D4E03AQH6ljtRcQjfIg/profile-displayphoto-shrink_800_800/B4EZSFQTnIGcAg-/0/1737402432866?e=1744848000&v=beta&t=Sf_Ndq-_FVriR1ndkx2tUNggpUZZiYD77LH1eyJrSyk"
+            src="https://res.cloudinary.com/dl1fugaha/image/upload/v1749648760/profile_f8zuz8.jpg"
             alt="Foto Jorge Navarro Nuñez 🤓"
           />
           <h1 className="md:col-start-2 text-[2.5rem] font-medium dark:text-white text-[#333]">

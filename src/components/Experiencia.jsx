@@ -17,6 +17,42 @@ export default function Experiencia() {
       <ol>
         <li className="grid grid-cols-[1fr_auto]">
           <Puesto
+            workstation={"Desarrollador FullStack Jr."}
+            company={"Code Global"}
+            startDate={"Marzo 2025"}
+            endDate={"Actualmente"}
+          >
+            <li>
+              Desarrollé interfaces dinámicas y responsivas utilizando Angular
+              17+ y componentes avanzados de PrimeNG.
+            </li>
+            <li>Implementé módulos de Producción y Renta de Vehiculos.</li>
+            <li>
+              Diseñé y desarrollé servicios RESTful utilizando NestJS,
+              conectando con bases de datos SQL según requerimientos del
+              negocio.
+            </li>
+            <li>
+              Integré validaciones tanto en frontend como backend, asegurando la
+              integridad de los datos y mejor experiencia del usuario.
+            </li>
+            <li>
+              Uso de Prisma para modelado de datos y manejo de entidades en
+              NestJS.
+            </li>
+            <li>
+              Contribuí al desarrollo de módulos clave del ERP, mejorando la
+              eficiencia operativa de áreas como logística y recursos humanos.
+            </li>
+            <li>
+              Participación activa en reuniones con el cliente para
+              levantamiento de requerimientos, validación funcional y
+              seguimiento del proyecto.
+            </li>
+          </Puesto>
+        </li>
+        <li className="grid grid-cols-[1fr_auto]">
+          <Puesto
             workstation={"Practicante de Desarrollo de Software"}
             company={"Hospital de Apoyo II - 1 Nuestra Señora de Las Mercedes"}
             startDate={"Agosto 2023"}
